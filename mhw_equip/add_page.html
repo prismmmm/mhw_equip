@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    name:<input type="text" id="name"><br>
+    user name:<input type="text" id="user"><br>
+    武器:<input type="text" id="wepon"> 装飾品:<input type="text" id="wepon_dec"><br>
+    頭:<input type="text" id="helm"> 装飾品:<input type="text" id="helm_dec"><br>
+    胴:<input type="text" id="body"> 装飾品:<input type="text" id="body_dec"><br>
+    腕:<input type="text" id="hand"> 装飾品:<input type="text" id="hand_dec"><br>
+    腰:<input type="text" id="waist"> 装飾品:<input type="text" id="waist_dec"><br>
+    脚:<input type="text" id="leg"> 装飾品:<input type="text" id="leg_dec"><br>
+
+    <p>SKIL</p>
+    <input type="text" id="skil1"> <input type="text" id="skil2"><br>
+    <input type="text" id="skil3"> <input type="text" id="skil4"><br>
+    <input type="text" id="skil5"> <input type="text" id="skil6"><br>
+    <input type="text" id="skil7"> <input type="text" id="skil8"><br>
+    <input type="text" id="skil9"> <input type="text" id="skil10"><br>
+
+    <p>こめんと</p>
+    <input type="text" id="comment">
+    <br><br>
+
+
+
+    <button id="add">追加</button>
+
+    <script>
+        window.onload = function () {
+            $("#add").click(function () {
+
+
+                var name = ($('#name').val() == '')? '':$('#name').val();
+                var user = $('#user').val();
+                var wepon = $('#wepon').val();
+                var wepon_dec = $('#wepon_dec').val();
+                var helm = $('#helm').val();
+                var helm_dec = $('#helm_dec').val();
+                var body = $('#body').val();
+                var body_dec = $('#body_dec').val();
+                var hand = $('#hand').val();
+                var hand_dec = $('#hand_dec').val();
+                var waist = $('#waist').val();
+                var waist_dec = $('#waist_dec').val();
+                var leg = $('#leg').val();
+                var leg_dec = $('#leg_dec').val();
+
+                var skils = [
+                    $('#skil1').val(),
+                    $('#skil2').val(),
+                    $('#skil3').val(),
+                    $('#skil4').val(),
+                    $('#skil5').val(),
+                    $('#skil6').val(),
+                    $('#skil7').val(),
+                    $('#skil8').val(),
+                    $('#skil9').val(),
+                    $('#skil10').val(),
+                ]
+
+                var comment = $('#comment').val();
+
+
+                var array = [{ 'name':name,
+                    'user':user,
+                    'wepon':wepon,
+                    'wepon_dec':wepon_dec,
+                    'helm':helm,
+                    'helm_dec':helm_dec,
+                    'body':body,
+                    'body_dec':body_dec,
+                    'hand':hand,
+                    'hand_dec':hand_dec,
+                    'waist':waist,
+                    'waist_dec':waist_dec,
+                    'leg':leg,
+                    'leg_dec':leg_dec,
+                    'comment':comment,
+                    'skil':skils}]
+
+            
+                send_data = JSON.stringify(array);
+
+                $.ajax({
+                    url: "setEquip.php", // 送信先のPHP
+                    type: "POST", // POSTで送る
+                    contentType: "Content-Type: application/json; charset=UTF-8",
+                    //必須ではなさそうだが、サーバ側との整合のために明示しておいた方がよい。
+                    // dataType: 'json', //受信形式 必須ではなさそうだがサーバ側との整合のために明示しておいた方がよい。
+                    data: send_data //JSON形式の送信データ
+                });
+
+            })
+
+        }
+    </script>
+</body>
+
+</html>

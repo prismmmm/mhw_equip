@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./js/jquery.js"></script>
+    <title>装備登録</title>
+  </head>
+  <body>
+    タイトル： <input type="text" id="title" class="title"/> <br />
+    投稿者：
+    <select id="user" class="user">
+      <option value="">未選択</option>
+      <option value="prism">prism</option>
+      <option value="taimeshi">taimeshi</option>
+    </select>
+    <br />
+    武器種：
+    <select id="type" class="type">
+      <option value="none">未選択</option>
+    </select>
+
+    <br />
+    <br />
+    武器：
+    <select id="wep" class="wep">
+      <option value="">武器種を選択してください</option>
+    </select>
+    装飾品：
+    <select id="wep_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="wep_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="wep_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+    <br />
+    頭：
+    <select id="helm" class="arm">
+      <option value="">未選択</option>
+    </select>
+    装飾品：
+    <select id="helm_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="helm_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="helm_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+
+    <br />
+    胴：
+    <select id="body" class="arm">
+      <option value="">未選択</option>
+    </select>
+    装飾品：
+    <select id="body_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="body_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="body_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+    <br />
+    腕：
+    <select id="hand" class="arm">
+      <option value="">未選択</option>
+    </select>
+    装飾品：
+    <select id="hand_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="hand_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="hand_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+    <br />
+    腰：
+    <select id="waist" class="arm">
+      <option value="">未選択</option>
+    </select>
+    装飾品：
+    <select id="waist_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="waist_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="waist_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+    <br />
+    脚：
+    <select id="leg" class="arm">
+      <option value="">未選択</option>
+    </select>
+    装飾品：
+    <select id="leg_dec1" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="leg_dec2" class="dec">
+      <option value="">-</option>
+    </select>
+    <select id="leg_dec3" class="dec">
+      <option value="">-</option>
+    </select>
+
+    <p>発動スキル</p>
+    <select id="skil1" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil1_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    &nbsp
+    <select id="skil2" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil2_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    <br />
+    <select id="skil3" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil3_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    &nbsp
+    <select id="skil4" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil4_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    <br />
+    <select id="skil5" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil5_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    &nbsp
+    <select id="skil6" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil6_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    <br />
+    <select id="skil7" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil7_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    &nbsp
+    <select id="skil8" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil8_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    <br />
+    <select id="skil9" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil9_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    &nbsp
+    <select id="skil10" class="skil"
+      ><option value="">-</option></select
+    >
+    <select id="skil10_lv" class="level"
+      ><option value="Lv0">Lv0</option></select
+    >
+    <p>コメント</p>
+    <textarea name="" id="comment" class="comment" cols="30" rows="1"></textarea>
+
+    <br>
+    <button type="button" id="button">登録</button>
+    
+    <script>
+      const dec = ["火属性強化", "水属性強化"];
+      const type = { sword: "太刀", bow: "弓" };
+      const none = ["武器種を選択してください"];
+
+      const bow = ["bow1", "bow2"];
+      const sword = ["sword1", "sword2"];
+
+      const wepons = { none, sword, bow };
+      const armors = ["レウスα", "レウスβ"];
+      const skils = ["属性強化", "攻撃", "防御", "体力"];
+
+      const levels = ["Lv1", "Lv2", "Lv3", "Lv4", "Lv5", "Lv6", "Lv7"];
+
+      let data = {
+        user: "user name",
+        title: "no title",
+        type: "",
+        comment:""
+      };
+
+      window.onload = function() {
+        //deta配列初期化
+        for (let i = 1; i < 11; i++) {
+          data[`skil${i}`] = "-";
+          data[`skil${i}_lv`] = 0;
+        }
+
+        var ids = ["wep", "helm", "body", "hand", "waist", "leg"];
+        ids.forEach(id => {
+          data[`${id}`] = "";
+          for (let i = 1; i < 4; i++) {
+            data[`${id}_dec${i}`] = "-";
+          }
+        });
+
+        $("#type").change(function() {
+          const wep = wepons[$(this).val()];
+
+          //select 初期化
+          const x = document.getElementById("wep");
+          if (x.hasChildNodes()) {
+            while (x.childNodes.length > 0) {
+              x.removeChild(x.firstChild);
+            }
+          }
+
+          wep.forEach(val => {
+            let op = document.createElement("option");
+            op.value = val;
+            op.text = val;
+            document.getElementById("wep").appendChild(op);
+          });
+        });
+
+        //スキル変更イベント
+        $(".skil").change(function() {
+          var id = $(this).attr("id");
+          data[id] = $(this).val();
+
+          console.log(data);
+        });
+
+        $(".level").change(function() {
+          var id = $(this).attr("id");
+          data[id] = $(this).val();
+
+          console.log(data);
+        });
+
+        $('#button').click(function(){
+          var json = JSON.stringify(data,null,"\t")
+          const res = window.confirm('この内容で登録しますか？');
+           if(res){
+;
+            console.log(json);
+           }
+          
+        });
+
+        $(document).on("change", ".wep, .dec, .arm, .user, .title, .type, .comment", function() {
+          var id = $(this).attr("id");
+          data[id] = $(this).val();
+          console.log(data);
+        });
+
+        //装飾品追加
+        let arr = document.getElementsByClassName("dec");
+        for (let i = 0; i < arr.length; i++) {
+          dec.forEach(d => {
+            let op = document.createElement("option");
+            op.value = d;
+            op.text = d;
+            document.getElementsByClassName("dec")[i].appendChild(op);
+          });
+        }
+
+        Object.keys(type).forEach(function(key) {
+          const val = this[key];
+          let op = document.createElement("option");
+          op.value = key;
+          op.text = val;
+          document.getElementById("type").appendChild(op);
+        }, type);
+
+        arr = document.getElementsByClassName("arm");
+        for (let i = 0; i < arr.length; i++) {
+          armors.forEach(d => {
+            let op = document.createElement("option");
+            op.value = d;
+            op.text = d;
+            document.getElementsByClassName("arm")[i].appendChild(op);
+          });
+        }
+
+        //skil
+        arr = document.getElementsByClassName("skil");
+        for (let i = 0; i < arr.length; i++) {
+          skils.forEach(d => {
+            let op = document.createElement("option");
+            op.value = d;
+            op.text = d;
+            document.getElementsByClassName("skil")[i].appendChild(op);
+          });
+        }
+        //level
+        arr = document.getElementsByClassName("level");
+        for (let i = 0; i < arr.length; i++) {
+          levels.forEach(d => {
+            let op = document.createElement("option");
+            op.value = d;
+            op.text = d;
+            document.getElementsByClassName("level")[i].appendChild(op);
+          });
+        }
+      };
+    </script>
+  </body>
+</html>
